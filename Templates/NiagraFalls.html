@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+<HTML>
+  <head>
+    <title>Niagra Falls</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/script1.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <a href="{{ url_for('home') }}">
+        <img src="{{ url_for('static', filename='img/TravelpediaLogo.png') }}" alt="TravelpediaLogo"></a>
+      <h1>Travelpedia</h1>
+    </header>
+        
+    <nav>
+      <a href="../home.html">Home</a>
+      <a href="../html/FindYourAdventure.html">Plan Your Adventure</a>
+      <a href="../html/AboutUS.html">About Us</a>
+      <a href="../html/Login.html" class="signup">Login</a>
+    </nav>
+        
+    <style>
+      body
+          {
+            background-image:url("../Static/Img/back1.jpg");
+              background-size: cover;
+
+              background-color: rgb(0, 69, 111);
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+              background-position: center;
+              background-size: cover;
+              background-size: 100%;
+              
+
+              font-family: 'Georgia, serif'; 
+              padding: 10px; 
+
+          }
+  </style>
+
+    <div class="descr">
+
+      <h1>Niagra Falls</h1>
+
+      <img src="{{ url_for('static', filename='img/Niagrafallsit.jpg') }}" alt="Niagra Falls" width="100%"></a>
+      
+      <h2>6-Day 5-Night Itinerary</h2>
+    
+    </div>
+
+    <div class="section-center">
+
+      <div class="tabs">
+          
+          <div class="btn-container">
+              <button class="button live" data-id="day1">Day 1</button>
+              <button class="button" data-id="day2">Day 2</button>
+              <button class="button" data-id="day3">Day 3</button>
+              <button class="button" data-id="day4">Day 4</button>
+              <button class="button" data-id="day5">Day 5</button>
+              <button class="button" data-id="day6">Day 6</button>
+          </div>
+        
+          <div class="tabs-content">
+
+          <div class="content live" id="day1">
+            <h3>Day 1: Arrival and Niagara Falls State Park</h3>
+            <p>
+              Arrive at Niagara Falls and check into your hotel.
+              Spend the day exploring Niagara Falls State Park, which offers stunning views of the falls from various vantage points.
+              You can also take a Maid of the Mist boat tour, which takes you right up to the base of the falls.
+            </p>
+          </div>
+
+          <div class="content" id="day2">
+            <h3>Day 2: Niagara-on-the-Lake and Wine Tasting</h3>
+            <p>
+              Drive to Niagara-on-the-Lake, a charming town known for its wineries and historic architecture.
+              Spend the morning exploring the town, visiting local shops, and grabbing lunch.
+              In the afternoon, visit some of the local wineries for wine tastings and vineyard tours.
+            </p>
+          </div>
+
+          <div class="content" id="day3">
+            <h3>Day 3: Cave of the Winds and Goat Island</h3>
+            <p>
+              Visit Cave of the Winds, a series of wooden walkways that take you close to the base of Bridal Veil Falls.
+              After Cave of the Winds, head to Goat Island for more stunning views of the falls.
+              You can also take a helicopter tour for an aerial view of the falls.
+            </p>
+          </div>
+
+          <div class="content" id="day4">
+            <h3>Day 4: Niagara Falls History Museum and Whirlpool State Park</h3>
+            <p>
+              Visit the Niagara Falls History Museum to learn about the history of the falls and the surrounding area.
+              In the afternoon, head to Whirlpool State Park, which offers great hiking trails and views of the Niagara River Gorge.
+            </p>
+          </div>
+
+          <div class="content" id="day5">
+            <h3>Day 5: Niagara Falls Illumination and Skylon Tower</h3>
+            <p>
+              Watch the falls light up at night during the Niagara Falls Illumination.
+              Head to the Skylon Tower for dinner and enjoy panoramic views of the falls and the surrounding area.
+            </p>
+          </div>
+
+          <div class="content" id="day6">
+            <h3>Day 6: Niagara Falls Aquarium and Departure</h3>
+            <p>
+              Visit the Niagara Falls Aquarium to see a variety of marine life, including sea lions, sharks, and penguins.
+              Depart Niagara Falls for your next destination.
+            </p>
+          </div>
+      </div>
+    </div>
+
+      <a href="PaymentMethod.html">
+        <div class=curved-center>
+          <h2>
+          Take me there!!!
+          </h2>
+        </div>
+      </a>
+
+        <br>
+
+    <div class="chart">
+
+      <div>
+        <canvas id="myChart"></canvas>
+      </div>
+
+      <script>
+        const ctx = document.getElementById('myChart');
+        
+        new Chart(ctx, 
+        {
+          type: 'bar',
+          data: {
+            labels: ['2008', '2009', '2010', '2011', '2012', '2013','2014', '2015', '2016', '2015', '2016', '2017','2018', '2019', '2020', '2021', '2022'],
+            datasets:
+            [{
+              label: 'Number of visitors to Niagara Falls (in millions)',
+              data: [10.88, 12, 11.32, 12.55, 11.54,10.75,11.75,13,12.5,11,11.5,12,13.7,10.75,12,14,12],
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: false
+              }
+            },
+            // Set the background color of the chart canvas to white
+            plugins: {
+              title: {
+                display: true,
+                text: 'Number of visitors to Niagara Falls (in millions) from 2008 to 2022'
+              }
+            },
+          }
+        });
+      </script>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function()
+{
+const tabs = document.querySelector('.tabs');
+const btns = document.querySelectorAll(".button");
+const articles = document.querySelectorAll(".content");
+tabs.addEventListener("click", function (e)
+{
+console.log("button clicked")
+const id = e.target.dataset.id;
+
+if (id) {
+// remove selected from other buttons
+btns.forEach(function (btn)
+{
+  btn.classList.remove("live");
+});
+
+e.target.classList.add("live");
+
+// hide other articles
+
+articles.forEach(function (article)
+{
+  article.classList.remove("live");
+});
+const element = document.getElementById(id);
+element.classList.add("live");
+}
+});
+});
+</script>    
+  </body>
+
+</HTML>

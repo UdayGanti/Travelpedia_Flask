@@ -1,0 +1,201 @@
+<!DOCTYPE HTML>
+<HTML>
+    <head>
+        <title>Statue Of Liberty</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    </head>
+
+    <body>
+        <header>
+          <a href="{{ url_for('home') }}">
+            <img src="{{ url_for('static', filename='img/TravelpediaLogo.png') }}" alt="TravelpediaLogo"></a>
+            <h1>Travelpedia</h1>
+        </header>
+        <nav>
+            <a href="../home.html">Home</a>
+            <a href="../html/FindYourAdventure.html">Plan Your Adventure</a>
+            <a href="../html/AboutUS.html">About Us</a>
+            <a href="../html/Login.html" class="signup">Login</a>
+        </nav>
+        
+        <style>
+          body
+              {
+                background-image:url("../Static/Img/back1.jpg");
+                  background-size: cover;
+
+                  background-color: rgb(0, 69, 111);
+                  background-repeat: no-repeat;
+                  background-attachment: fixed;
+                  background-position: center;
+                  background-size: cover;
+                  background-size: 100%;
+                  
+
+                  font-family: 'Georgia, serif'; 
+                  padding: 10px; 
+
+              }
+      </style>
+
+<div class="descr">
+
+  <h1>Statue Of Liberty</h1>
+
+  <img src="{{ url_for('static', filename='img/StatueOfLibertyIT.jpg') }}" alt="StatueOfLiberty" width="100%"></a>
+  
+  <h2>6-Day 5-Night Itinerary</h2>
+
+</div>
+
+<div class="section-center">
+
+  <div class="tabs">
+      
+      <div class="btn-container">
+          <button class="button live" data-id="day1">Day 1</button>
+          <button class="button" data-id="day2">Day 2</button>
+          <button class="button" data-id="day3">Day 3</button>
+          <button class="button" data-id="day4">Day 4</button>
+          <button class="button" data-id="day5">Day 5</button>
+          <button class="button" data-id="day6">Day 6</button>
+      </div>
+    
+      <div class="tabs-content">
+
+      <div class="content live" id="day1">
+        <h3>Day 1: Arrival and Statue of Liberty</h3>
+        <p>
+          Arrive in New York City and check into your hotel.
+          Head to Battery Park and take a ferry to Liberty Island to visit the Statue of Liberty.
+          Climb to the top of the pedestal or book in advance to visit the crown.
+        </p>
+      </div>
+
+      <div class="content" id="day2">
+        <h3>Day 2: Ellis Island and 9/11 Memorial & Museum</h3>
+        <p>
+          Take the ferry to Ellis Island and visit the Ellis Island National Museum of Immigration to learn about the history of American immigration.
+          After Ellis Island, visit the 9/11 Memorial & Museum to pay tribute to those who lost their lives in the 9/11 attacks.
+        </p>
+      </div>
+
+      <div class="content" id="day3">
+        <h3>Day 3: Wall Street and One World Trade Center</h3>
+        <p>
+          Explore Wall Street, the financial district of New York City.
+          Visit One World Trade Center and take the elevator to the top to see panoramic views of the city.
+        </p>
+      </div>
+
+      <div class="content" id="day4">
+        <h3>Day 4: Central Park and the Metropolitan Museum of Art</h3>
+        <p>
+          Visit Central Park and explore the many attractions it has to offer, such as the Central Park Zoo and the Bethesda Fountain.
+          After Central Park, head to the Metropolitan Museum of Art, one of the world's largest and most comprehensive art museums.
+        </p>
+      </div>
+
+      <div class="content" id="day5">
+        <h3>Day 5: Empire State Building and Broadway Show</h3>
+        <p>
+          Visit Central Park and explore the many attractions it has to offer, such as the Central Park Zoo and the Bethesda Fountain.
+          After Central Park, head to the Metropolitan Museum of Art, one of the world's largest and most comprehensive art museums.
+        </p>
+      </div>
+
+      <div class="content" id="day6">
+        <h3>Day 6: Brooklyn Bridge and Departure</h3>
+        <p>
+          Walk across the Brooklyn Bridge to see amazing views of Manhattan and Brooklyn.
+          Depart New York City for your next destination.
+        </p>
+      </div>
+  </div>
+</div>  
+
+        <a href="PaymentMethod.html">
+            <div class=curved-center>
+
+                <h2>
+                    Take me there!!!
+                </h2>
+                <br>
+
+            </div>
+        </a>
+
+        <div class="chart">
+
+            <div>
+              <canvas id="myChart"></canvas>
+            </div>
+          
+          <script>
+            const ctx = document.getElementById('myChart');
+            
+            new Chart(ctx, {
+              type: 'bar',
+              data: {
+                labels: ['2008', '2009', '2010', '2011', '2012', '2013','2014', '2015', '2016', '2015', '2016', '2017','2018', '2019', '2020', '2021', '2022'],
+                datasets: [{
+                  label: 'Number of visitors to Statue of Liberty(in millions)',
+                  data: [3.54,3.83,3.83,3.75,3.03,1.88,4.2,4.28,4.5,4.44,4.34,4.24,0.58,1.56,3.14,3.5,3.8],
+                  borderWidth: 1
+                }]
+              },
+              options: {
+                scales: {
+                  y: {
+                    beginAtZero: false
+                  }
+                },
+                // Set the background color of the chart canvas to white
+                plugins: {
+                  title: {
+                    display: true,
+                    text: 'Number of visitors to Statue of Liberty (in millions) from 2008 to 2022'
+                  }
+                },
+              }
+            });
+          </script>
+          </div>
+
+          <script>
+                        document.addEventListener('DOMContentLoaded', function()
+            {
+              const tabs = document.querySelector('.tabs');
+              const btns = document.querySelectorAll(".button");
+              const articles = document.querySelectorAll(".content");
+              tabs.addEventListener("click", function (e)
+              {
+                console.log("button clicked")
+                const id = e.target.dataset.id;
+
+                if (id) {
+                  // remove selected from other buttons
+                  btns.forEach(function (btn)
+                  {
+                    btn.classList.remove("live");
+                  });
+
+                  e.target.classList.add("live");
+                  
+                  // hide other articles
+                  
+                  articles.forEach(function (article)
+                  {
+                    article.classList.remove("live");
+                  });
+                  const element = document.getElementById(id);
+                  element.classList.add("live");
+                }
+              });
+            });
+          </script>
+
+    </body>
+</HTML>

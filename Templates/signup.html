@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+
+        function validateForm() {
+            const name = document.forms["signupForm"]["name"].value;
+            const mail = document.forms["signupForm"]["mail"].value;
+            const pass = document.forms["signupForm"]["pass"].value;
+            const checkBox = document.getElementById("signupCheck");
+
+            if (name == "" || mail == "" || pass == "" || checkBox.checked == false) {
+                alert("Please fill in all fields and accept the terms and conditions.");
+                return false;
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <title>Signup Form</title>
+</head>
+
+<body>
+    <header>
+           
+
+        <a href="{{ url_for('home') }}">
+          <img src="{{ url_for('static', filename='img/TravelpediaLogo.png') }}" alt="TravelpediaLogo"></a>
+          
+          <h1>Travelpedia</h1>
+      </header>
+      <nav>
+          <a href="../home.html">Home</a>
+          <a href="../html/FindYourAdventure.html">Plan Your Adventure</a>
+          <a href="../html/AboutUS.html">About Us</a>
+          <a href="../html/Login.html" class="signup">Login</a>
+
+      </nav>
+
+    <style>
+        body
+            {
+              background-image: url("{{ url_for('static', filename='Img/back1.jpg') }}");
+              background-size: cover;
+    
+              background-color: rgb(0, 69, 111);
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+              background-position: center;
+              background-size: cover;
+              background-size: 100%;
+              
+    
+              font-family: 'Georgia, serif'; 
+              padding: 10px; 
+            }
+      </style>
+    <div class="form_container">
+        <h1>Sign Up</h1>
+        <br>
+        <br>
+        <section class="wrapper">
+            <div class="form signup">
+
+                <form name="signupForm" onsubmit="return validateForm()" action="{{ url_for('addrec') }}" method="POST">
+                    <input type="text" name="name" placeholder="Full name" required />
+                    <input type="email" name="mail" placeholder="Email address" required />
+                    <input type="password" name="pass" placeholder="Password" required />
+                    <br>
+                    <br>
+                    <input class="btn" type="submit" value="Signup">
+                </form>
+            </div>
+
+        
+            <script>
+                const wrapper = document.querySelector(".wrapper"),
+                    signupHeader = document.querySelector(".signup header"),
+                    loginHeader = document.querySelector(".login header");
+
+                loginHeader.addEventListener("click", () => {
+                    wrapper.classList.add("active");
+                });
+                signupHeader.addEventListener("click", () => {
+                    wrapper.classList.remove("active");
+                });
+            </script>
+        </section>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<HTML>
+    <head>
+        <title>Travelpedia - Home</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    </head>
+
+    <body>
+
+        <div id="bg-image"></div>
+
+        <header>
+            <a href="{{ url_for('home') }}">
+                <img src="{{ url_for('static', filename='img/TravelpediaLogo.png') }}" alt="TravelpediaLogo"></a>
+            
+            <h1>Travelpedia</h1>
+        </header>
+
+        <nav>
+            <a href="./home.html">Home</a>
+            <a href="./html/FindYourAdventure.html">Plan Your Adventure</a>
+            <a href="./html/AboutUS.html">About Us</a>
+            <a href="./html/Login.html" class="signup">Login</a>
+
+        </nav>
+
+        <style>
+            body
+                {
+                    background-image:url("../Static/Img/back1.jpg");
+                    background-size: cover;
+
+                    background-color: rgb(0, 69, 111);
+                    background-repeat: no-repeat;
+                    background-attachment: fixed;
+                    background-position: center;
+                    background-size: cover;
+                    background-size: 100%;
+                    
+
+                    font-family: 'Georgia, serif'; 
+                    padding: 10px; 
+
+                }
+        </style>
+        <div class = mainHeader>
+            <h2>Find</h2>
+            <br>
+            <h3>Your</h3>
+            <br>
+            <h1>Adventure</h1>
+        </div>
+       
+        <div class="curved-right">
+            <a href="./html/FindYourAdventure.html">    
+                <h2>Explore</h2>
+            </a>
+        </div>
+        <br>
+        <br>
+
+
+        <footer>
+            <p>&copy; 2023 Travelpedia.com All rights reserved.</p>
+        </footer>
+
+       
+        
+        <div id="bg-image"></div>
+        
+        <script>
+          const bgImage = document.getElementById('bg-image');
+          const images = [
+            '{{ url_for('static', filename='img/image1.jpg') }}',
+            '{{ url_for('static', filename='img/image2.jpg') }}',
+            '{{ url_for('static', filename='img/image3.jpg') }}',
+            '{{ url_for('static', filename='img/image4.jpg') }}',
+            '{{ url_for('static', filename='img/image5.jpg') }}',
+            '{{ url_for('static', filename='img/image6.jpg') }}',
+            '{{ url_for('static', filename='img/image7.jpg') }}'
+          ];
+          let index = 0;
+          setInterval(() => {
+            bgImage.style.backgroundImage = `url(${images[index]})`;
+            index = (index + 1) % images.length;
+          }, 2000); // 2 seconds
+        </script>
+    </body>
+</html>

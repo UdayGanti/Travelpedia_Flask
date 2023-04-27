@@ -1,0 +1,756 @@
+/* Header Code starts */
+
+*{
+    padding: 3px;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all .2s;
+    font-family: 'Georgia, serif'; 
+
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/*  background image and header */
+
+header
+{
+    height: 90px;
+    padding-top: 0px;
+    background-image: linear-gradient(to bottom, #051087, #7802cd);
+}
+
+header img
+{
+    float: left;
+    width: 90px;
+    height: 90px;
+}
+
+header h1
+{
+    text-align: center;
+    padding-top: 12px;
+    color: #ffffff;
+    font-size: 50px;
+}
+
+/*  background image  detailing ends here */
+
+/* Navigation Bar Code Start*/
+
+nav
+{
+    background-color: #ffffff;
+    overflow: hidden;
+    opacity: 80%;
+}
+
+nav
+a
+{
+    float: left;
+    display: block;
+    position: relative;
+    
+    text-align: center;
+    padding: 5px 16px;
+
+    color: #060b3d;
+    font-size: 25px;
+    
+    
+
+}
+
+nav a:hover
+{
+    background-color: #1422be;
+    color: rgb(255, 255, 255);
+    opacity: 100%;
+}
+
+/* Navigation Bar Code Ends*/
+
+/* Common Body Code*/
+
+body
+{
+    background-image:url("../img/back1.jpg");
+    background-size: cover;
+
+    background-color: rgb(0, 69, 111);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-size: 100%;
+    
+
+    font-family: 'Georgia, serif'; 
+    padding: 10px; 
+
+}
+
+body
+a{
+    text-decoration: none;
+}
+
+img 
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+    
+
+/* Main Header*/
+
+.mainheader
+{
+    padding: 0px;
+}
+
+/* Main Header Common*/
+.mainHeader 
+h1,h2,h3
+{
+    color: rgb(255, 255, 255);
+
+    text-align:right;
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+    font-family: 'Courier New', Courier, monospace;  
+
+    margin: 0;
+
+}
+
+/* Main Header Common*/
+.mainHeader 
+h1
+{
+    padding-right: 50px;
+    font-size: 150px;
+    
+}
+
+.mainHeader 
+h2
+{
+    padding-right: 50px;
+    font-size: 100px;
+    padding-top: 40px;
+}
+
+.mainHeader 
+h3
+{
+    padding-right: 50px;
+    font-size: 50px;
+    padding-top: 10px;
+
+}
+/* addtional css tags for explore option for landing page*/
+
+.curved-right
+{
+    
+    color: #ffffff;
+    float: right;
+    
+    text-align: right;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px;
+
+
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+    -webkit-text-stroke: 1px black;
+
+    position: relative;
+
+}
+
+.curved-right h2 {
+    transition: transform 0.2s ease-in-out;
+}
+
+.curved-right h2:hover {
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+/* addtional css tags for explore option for landing page ends here*/
+
+
+
+/* addtional css tags for take me there option for product page starts here*/
+.curved-center
+{
+    
+    color: #ffffff;
+    float: center;
+    min-width: 100%;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    
+
+    -webkit-text-stroke: 1px black;
+    padding-right: 50px;
+    padding-left: 50px;
+
+}
+
+.curved-center
+h2
+{
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+/* addtional css tags for take me there option for product page ends here*/
+
+
+/* Screen Split Code*/
+
+canvas
+{
+    display: flex;
+    white-space: nowrap;
+    width:100%;
+    min-height: 500px;
+    background-color: #ffffff;
+
+}
+
+
+
+/* Screen Split Code ends here */
+
+.leftabout
+{
+    height:500px;
+    width: 50%;
+    float: left;
+    border: 5px solid #eef0f1;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    opacity: 80%;
+    
+
+}
+
+.leftabout img {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .leftabout img:hover {
+    transform: scale(1.1);
+    
+  }
+
+.rightabout
+{
+    height:500px;
+    width: 50%;
+    float: right;
+
+    overflow: scroll;
+
+    color: rgb(35, 0, 67);
+    background-color: #edeff0;
+    background-size: 100%;
+
+    text-align: justify;
+    border: 5px solid #9fbad6;
+    padding: 5px;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    opacity: 70%;
+    font-size: 16px;
+
+}
+
+/* anchor highlighting hyperlink */
+.anc
+{
+    color: white;
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+    position: relative;
+    padding: 7px;
+
+    
+}
+
+/* anchor highlighting hyperlink  ends here*/
+
+
+/*Responsiveness for mobiles */
+
+@media (max-width: 600px) 
+{
+    img {
+      width:100%;
+      position: relative;
+    }
+
+}
+
+/*Responsiveness for mobiles  ends here */
+
+/*Responsiveness for Tablets  */
+
+
+@media (min-width: 600px) and (max-width: 912px)
+{
+    img
+    {
+      width:100%;
+      position: relative;
+    }
+
+    nav a {
+        float: left;
+        display: block;
+        text-align: left;
+        width:100%;
+    }
+}
+
+/*Responsiveness for Tablets  ends here */
+
+ /* Responsiveness For Desktops */
+
+@media (min-width: 912px)
+{
+    img
+    {
+      width:100%;
+      position: relative;
+    }
+
+    nav a 
+    {
+        float: left;
+        display: block;
+        text-align: left;
+    }
+}
+
+
+ /* Responsiveness For Desktops ends here */
+
+
+ /*iternary page description*/
+
+.descr
+{
+text-align: left;
+}
+
+.descr
+h1
+{
+    border: 5px solid rgb(255, 255, 255);
+    color: #ffffff;
+    text-align: center;
+
+}
+
+.descr
+h2
+{
+    border: 5px solid rgb(255, 255, 255);
+    color: #ffffff;
+    text-align: left;
+
+
+}
+
+.descr
+h3
+{
+    color: #ffffff;
+    text-align: left;
+
+
+}
+
+.descr
+p
+{
+    color: #ffffff;
+    text-align: left;
+    padding: 5px;
+}
+
+.descr
+img
+{
+    width: 100%;
+    height: 300px;
+}
+
+
+/*iternary page description ends here*/
+
+
+/*About us page */
+.aboutText
+{
+    text-align: center;
+}
+
+.aboutText
+h1
+{
+    border: 5px solid rgb(255, 255, 255);
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+}
+
+
+.aboutText
+p
+{
+    color: #ffffff;
+    text-align: center;
+    padding: 40px;
+}
+
+/*About us page  ends here*/
+
+footer
+{
+    width: 100%;
+    height: 10 px;
+
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 0;
+}
+
+footer
+p
+{
+    position: absolute;
+    bottom: 0;
+    background-color: #060b3d;
+
+    width: 100%;
+    height: 10 px;
+
+    color: white;
+}
+
+/*-----------------New Additions------------------*/
+
+#bg-image
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  }
+
+/* #image
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    transition: width 0.3s ease-in-out;
+} */
+
+
+
+.container {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  
+  .leftImg {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    transition: all 0.5s;
+
+  }
+  
+  .rightText {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease-in-out;
+
+    padding: 20px;
+  }
+  
+  .container:hover .rightText {
+    opacity: 1;
+  }
+  
+  .leftImg:hover + .rightText {
+    opacity: 1;
+  }
+
+  .leftImg:hover {
+  transform: translateX(-20%);
+  }
+
+/*-----------------SignUp/Login------------------*/
+
+.signup
+{
+    float:right;
+}
+
+.signup-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+  }
+
+  /* Heading */
+  .signup-heading {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+  
+  /* Input fields */
+  .signup-input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  /* Button */
+  .signup-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .signup-btn:hover {
+    background-color: #3e8e41;
+  }
+  
+  /* Error message */
+  .errorMessages {
+    color: red;
+    margin-top: 5px;
+    font-size: 14px;
+  }
+  
+  
+  /* Container styles */
+  .container {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+  
+  /* Input styles */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+  
+  /* Button styles */
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+/*-----------------SignUp/Login End------------------*/
+
+.aboutcontainer
+{
+    display: flex;
+    width:fit-content;
+}
+
+
+/*Copy Code*/
+.section-center 
+{
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+    min-width: 340px;
+    padding: 5rem 0;
+}
+  
+.tabs 
+{
+    background: #8490fa;
+    border-radius: 0.5rem;
+    grid-template-rows: auto 1fr;
+
+    text-align: justify;
+}
+
+.btn-container 
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.button:nth-child(1) 
+{
+    border-top-left-radius: 0.5rem;
+}
+
+.button:nth-child(3) 
+{
+    border-top-right-radius: 0.5rem;
+}
+
+.button {
+    padding: 1rem 0;
+    border: none;
+    font-size: 1rem;
+    background: #b3cbfc;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    letter-spacing: 0.25rem;
+}
+
+.button:hover:not(.live) {
+    background: #9e3cff;
+    color: white;
+}
+
+.tabs-content 
+{
+    padding: 2rem 1.5rem;
+}
+
+.tabs-content 
+    h3
+    {
+        font-size: 30px;
+    }
+
+/* hide content */
+
+.content
+{
+    display: none;
+}
+
+.content.live
+{
+    display: block;
+}
+
+.button.live 
+{
+    background: #9e3cff;
+}
+
+@media (min-width: 992px)
+{
+    .image {
+    margin-bottom: 0;
+    }
+
+}
+
+.form_container {
+    width: 40%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    background: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 5%;
+    padding: 20px;
+    font-size: larger;
+}
+
+.form_container
+h1
+{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    background: linear-gradient(to bottom, #33ccff 0%, #99ccff 100%);
+    color: white;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  

@@ -1,0 +1,216 @@
+<!DOCTYPE HTML>
+<HTML>
+    <head>
+        <title>Golden Gate Itinerary</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="../js/script1.js"></script>
+    </head>
+
+    <body>
+        <header>
+           
+
+          <a href="{{ url_for('home') }}">
+            <img src="{{ url_for('static', filename='img/TravelpediaLogo.png') }}" alt="TravelpediaLogo"></a>
+            
+            <h1>Travelpedia</h1>
+        </header>
+        <nav>
+            <a href="../home.html">Home</a>
+            <a href="../html/FindYourAdventure.html">Plan Your Adventure</a>
+            <a href="../html/AboutUS.html">About Us</a>
+            <a href="../html/Login.html" class="signup">Login</a>
+
+        </nav>
+        <style>
+          body
+              {
+                background-image:url("../Static/Img/back1.jpg");
+                  background-size: cover;
+
+                  background-color: rgb(0, 69, 111);
+                  background-repeat: no-repeat;
+                  background-attachment: fixed;
+                  background-position: center;
+                  background-size: cover;
+                  background-size: 100%;
+                  
+
+                  font-family: 'Georgia, serif'; 
+                  padding: 10px; 
+
+              }
+      </style>
+
+        <div class="descr">
+            <h1>Golden Gate Bridge</h1>
+            
+            <br>
+
+            <img src="{{ url_for('static', filename='img/GoldenGateIten.jpg') }}" alt="Goldengate Bridge" width="100%"></a>
+            <h2>6-Day 5-Night Itinerary</h2>
+        </div>
+        
+        <div class="section-center">
+          
+          <div class="tabs">
+              
+            <div class="btn-container">
+              <button class="button live" data-id="day1">Day 1</button>
+              <button class="button" data-id="day2">Day 2</button>
+              <button class="button" data-id="day3">Day 3</button>
+              <button class="button" data-id="day4">Day 4</button>
+              <button class="button" data-id="day5">Day 5</button>
+              <button class="button" data-id="day6">Day 6</button>
+          </div>    
+          
+          <div class="tabs-content">
+               
+          <div class="content live" id="day1">
+            <h3>Day 1: Arrival and Orientation</h3>
+            <p>
+            Arrive in San Francisco and check in to your accommodation.
+            Spend the afternoon exploring the area around the Golden Gate Bridge, including the Presidio and Crissy Field. These areas offer great views of the bridge and the bay.
+            In the evening, head to Fisherman's Wharf to enjoy some seafood and the lively atmosphere.
+            </p>
+           </div>
+            
+           <div class="content" id="day2">
+            <h3>Day 2: Biking the Bridge</h3>
+            <p>
+            Rent a bike and ride across the Golden Gate Bridge to the charming town of Sausalito on the other side.
+            Explore Sausalito's art galleries, cafes, and shops, and enjoy the waterfront views.
+            Take the ferry back to San Francisco in the late afternoon and have dinner in the city.
+            </p>
+          </div>
+
+          <div class="content" id="day3">
+            <h3>Day 3: Alcatraz Island</h3>
+            <p>
+              Take a ferry to Alcatraz Island, the former prison that housed some of America's most notorious criminals.
+              Take the audio tour to learn about the prison's history and its most famous inmates.
+              Return to the city in the early afternoon and spend some time relaxing in Golden Gate Park.
+            </p>
+          </div>
+
+          <div class="content" id="day4">
+            <h3>Day 4: Wine Country Tour</h3>
+            <p>
+            Take a day trip to the nearby wine country, such as Napa or Sonoma.
+            Enjoy wine tastings and vineyard tours, and take in the beautiful scenery.
+            Return to San Francisco in the evening and have dinner at a restaurant in one of the city's vibrant neighborhoods, such as the Mission or North Beach.
+            </p>
+          </div>
+
+          <div class="content" id="day5">
+            <h3>Day 5: Exploring the City</h3>
+            <p>
+            Spend the day exploring some of San Francisco's other attractions, such as the Golden Gate Park, the Exploratorium, or the de Young Museum.
+            In the evening, head to the Haight-Ashbury neighborhood to experience the city's famous counterculture vibe.
+            </p>
+          </div>
+
+          <div class="content" id="day6">
+            <h3>Day 6: Muir Woods and Beach</h3>
+            <p>
+              Take a day trip to Muir Woods, a stunning redwood forest just north of San Francisco.
+              After exploring the woods, head to Muir Beach to enjoy the ocean views and have a picnic.
+              Return to San Francisco in the late afternoon and have a farewell dinner at a nice restaurant.
+            </p>
+        </div> 
+      </div>
+    </div>
+        
+        
+        <a href="PaymentMethod.html">
+            <div class=curved-center>
+
+                <h2>
+                    Take me there!!!
+                </h2>
+
+            </div>
+        </a>
+
+        <br>
+        
+        <div class="chart">
+
+            <div>
+              <canvas id="myChart"></canvas>
+            </div>
+          
+          <script>
+            const ctx = document.getElementById('myChart');
+            
+            new Chart(ctx, {
+              type: 'bar',
+              data: {
+                labels: ['2008', '2009', '2010', '2011', '2012', '2013','2014', '2015', '2016', '2015', '2016', '2017','2018', '2019', '2020', '2021', '2022'],
+                datasets: [{
+                  label: 'Number of visitors to Golden State Bridge (in millions)',
+                  data: [14.55, 15.04, 14.27, 14.57, 14.54, 14.29, 15, 14.89, 15.64, 14.98, 15.22, 15, 12.4, 13.71, 15.64, 14.76,15.54
+],
+                  borderWidth: 1
+                }]
+              },
+              options: {
+                scales: {
+                  y: {
+                    beginAtZero: false
+                  }
+                },
+                // Set the background color of the chart canvas to white
+                plugins: {
+                  title: {
+                    display: true,
+                    text: 'Number of visitors to Golden State Bridge (in millions) from 2008 to 2022'
+                  }
+                },
+              }
+            });
+          </script>
+          </div>
+
+
+
+         
+          <script>
+            document.addEventListener('DOMContentLoaded', function()
+{
+  const tabs = document.querySelector('.tabs');
+  const btns = document.querySelectorAll(".button");
+  const articles = document.querySelectorAll(".content");
+  tabs.addEventListener("click", function (e)
+  {
+    console.log("button clicked")
+    const id = e.target.dataset.id;
+
+    if (id) {
+      // remove selected from other buttons
+      btns.forEach(function (btn)
+      {
+        btn.classList.remove("live");
+      });
+
+      e.target.classList.add("live");
+      
+      // hide other articles
+      
+      articles.forEach(function (article)
+      {
+        article.classList.remove("live");
+      });
+      const element = document.getElementById(id);
+      element.classList.add("live");
+    }
+  });
+});
+</script>          
+          
+                 
+    </body>
+
+
+</HTML>
