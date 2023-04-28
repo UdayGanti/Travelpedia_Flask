@@ -24,7 +24,7 @@
         <style>
             body
                 {
-                    background-image:url("../Static/Img/back1.jpg");
+                    background-image: url("{{ url_for('static', filename='Img/back1.jpg') }}");
                     background-size: cover;
 
                     background-color: rgb(0, 69, 111);
@@ -37,7 +37,6 @@
 
                     font-family: 'Georgia, serif'; 
                     padding: 10px; 
-
                 }
         </style>
         <br>
