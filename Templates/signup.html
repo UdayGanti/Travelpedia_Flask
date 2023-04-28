@@ -41,22 +41,20 @@
       </nav>
 
       <style>
-        body
-            {
-                background-image: url("{{ url_for('static', filename='Img/back1.jpg') }}");
-                background-size: cover;
+        body {
+        background-image: url("{{ url_for('static', filename='Img/back1.jpg') }}");
+        background-color: rgb(0, 69, 111);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        font-family: 'Georgia, serif';
+        padding: 10px;
+        height: 100vh; /* set the height of the body to be 100% of the viewport height */
+        width: 100%; /* set the width of the body to be 100% of the viewport width */
+        overflow-x: hidden; /* hide horizontal scrollbar that may appear */
+        }
 
-                background-color: rgb(0, 69, 111);
-                background-repeat: no-repeat;
-                background-attachment: fixed;
-                background-position: center;
-                background-size: cover;
-                background-size: 100%;
-                
-
-                font-family: 'Georgia, serif'; 
-                padding: 10px; 
-            }
     </style>
     
     <div class="form_container">
